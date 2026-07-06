@@ -107,6 +107,10 @@ In the Copilot Chat panel, use the `@` prefix to summon an agent by name:
 @mgmt-review Review this management SDK PR for API design guideline compliance
 ```
 
+```
+@mgmt-breaking-change-analysis Analyze the breaking changes in this ARM SDK migration from AutoRest to TypeSpec
+```
+
 ### Available Agent Names
 
 | Chat command | Agent |
@@ -115,6 +119,7 @@ In the Copilot Chat panel, use the `@` prefix to summon an agent by name:
 | `@dash` | Performance review |
 | `@dexter` | Dependency review |
 | `@mgmt-review` | Management SDK review |
+| `@mgmt-breaking-change-analysis` | Breaking change analysis for ARM SDK migrations (on-demand) |
 | `@scribe` | Documentation review |
 | `@sentinel` | Security review |
 | `@tester` | Test coverage and quality review |

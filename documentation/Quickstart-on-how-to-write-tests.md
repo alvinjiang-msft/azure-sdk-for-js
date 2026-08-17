@@ -113,15 +113,14 @@ sdk/
 │  ├─ purview-datamap-rest/
 │  │  ├─ src/
 │  │  │  ├─ ...
-│  │  ├─ recordings/
-│  │  │  ├─ node/
-│  │  │  ├─ browsers/
 │  │  ├─ test/
 │  │  │  ├─ public/
 │  │  │  |  ├─ utils/
 │  │  │  |  |  ├─ recordedClient.ts
 │  │  │  |  ├─ sampleTest.spec.ts
 ```
+
+> **Note:** There is no local `recordings/` folder. Recordings are stored in the [azure-sdk-assets](https://github.com/Azure/azure-sdk-assets) repository and downloaded on demand by the test-proxy tool via `assets.json`. See [How to push test recordings to assets repo](#how-to-push-test-recordings-to-assets-repo).
 
 You could also refer [here](https://github.com/Azure/azure-sdk-for-js/blob/main/documentation/steps-after-generations.md#how-to-write-test-for-dpgrlcmpg) to add your test cases.
 

@@ -11,6 +11,7 @@ domain and produces targeted, actionable feedback.
 | **Archie** | `architecture-review-needed` | Public API surface — naming, exports, breaking changes, type safety |
 | **Dash** | `performance-review-needed` | Runtime performance — latency, memory, bundle size, async patterns |
 | **Dexter** | `dependency-review-needed` | Dependency management — version ranges, workspace protocol, new deps |
+| **Mgmt-breaking-change-analysis** | *(on-demand)* | ARM SDK breaking-change analysis — categorize, trace root causes, generate structured reports for Swagger→TypeSpec migrations |
 | **Mgmt-review** | `mgmt-review-needed` | Management-plane SDKs — API design guidelines, tooling validation |
 | **Scribe** | `docs-review-needed` | Documentation — README, CHANGELOG, TSDoc, snippets, samples |
 | **Sentinel** | `security-review-needed` | Security — credential exposure, injection, unsafe patterns, supply chain |
@@ -114,6 +115,7 @@ In the Copilot Chat panel, use the `@` prefix to summon an agent by name:
 | `@archie` | Architecture / API design review |
 | `@dash` | Performance review |
 | `@dexter` | Dependency review |
+| `@mgmt-breaking-change-analysis` | ARM SDK breaking-change analysis |
 | `@mgmt-review` | Management SDK review |
 | `@scribe` | Documentation review |
 | `@sentinel` | Security review |
@@ -139,6 +141,7 @@ Agent definitions and their detailed review guidelines are stored in:
 │   ├── archie.agent.md
 │   ├── dash.agent.md
 │   ├── dexter.agent.md
+│   ├── mgmt-breaking-change-analysis.agent.md
 │   ├── mgmt-review.agent.md
 │   ├── scribe.agent.md
 │   ├── sentinel.agent.md
@@ -147,6 +150,8 @@ Agent definitions and their detailed review guidelines are stored in:
 │   ├── architecture-review-guidelines.md
 │   ├── performance-review-guidelines.md
 │   ├── dependency-review-guidelines.md
+│   ├── mgmt-breaking-change-analysis-guidelines.md
+│   ├── mgmt-breaking-change-patterns.md
 │   ├── mgmt-review-guidelines.md
 │   ├── documentation-review-guidelines.md
 │   ├── security-review-guidelines.md
@@ -155,6 +160,7 @@ Agent definitions and their detailed review guidelines are stored in:
     ├── archie.md / archie.lock.yml
     ├── dash.md / dash.lock.yml
     ├── dexter.md / dexter.lock.yml
+    ├── mgmt-guidance.md / mgmt-guidance.lock.yml
     ├── mgmt-review.md / mgmt-review.lock.yml
     ├── scribe.md / scribe.lock.yml
     ├── sentinel.md / sentinel.lock.yml

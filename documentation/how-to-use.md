@@ -48,10 +48,10 @@ In this document, we will give a brief introduction on how to use the JavaScript
 
         async function test() {
             const client = new TargetManagementClient(credentials, subscriptionId);
-            const result = await client.operations.list();
-            // you can test that you need test operation
-            console.log("The result is:\n");
-            console.log(result);
+            // operations.list() returns a PagedAsyncIterableIterator; iterate with for-await
+            for await (const item of client.operations.list()) {
+                console.log(item);
+            }
         }
 
         test();

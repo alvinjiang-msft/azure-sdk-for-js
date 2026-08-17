@@ -148,7 +148,7 @@ npm run generate:client
 Use the dev-tool customization command to copy generated files to `src/` and merge with existing customizations:
 
 ```bash
-npx dev-tool customization apply --skip index.ts
+pnpm exec dev-tool customization apply --skip index.ts
 ```
 
 This command:
@@ -243,7 +243,7 @@ Delete the following files that are no longer needed:
 2. **Build the package:**
 
    ```bash
-   pnpm turbo build
+   pnpm turbo build --filter=<your-package-name>... --token 1
    ```
 
 3. **Run tests:**
@@ -269,7 +269,7 @@ After migration, your development workflow becomes:
 
 1. **Update TypeSpec definitions** in azure-rest-api-specs
 2. **Generate new code:** `npm run generate:client`
-3. **Build and test:** `pnpm turbo build && pnpm test`
+3. **Build and test:** `pnpm turbo build --filter=<your-package-name>... --token 1 && pnpm test`
 
 ### Version Management
 

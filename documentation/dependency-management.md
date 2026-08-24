@@ -12,6 +12,8 @@ Let's assume that a vulnerability has been found in [node-fetch] version 2.6.6 a
 
 The outputs below assume you're using `npm v8.1.2` with a lockfile, but we will provide instructions for Yarn as well.
 
+> **Note:** The examples below reference `@azure/core-http`, which is a **deprecated** package. Modern Azure SDK packages use `@azure/core-rest-pipeline` instead. The dependency resolution techniques shown here apply equally to any transitive dependency.
+
 ### Identifying the dependency tree
 
 First, let's see how `node-fetch` is pulled into our dependency tree.

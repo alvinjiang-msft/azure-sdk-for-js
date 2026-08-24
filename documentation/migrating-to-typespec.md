@@ -31,7 +31,13 @@ Before starting the migration, ensure you have:
 
 ### Step 1: Install Required Tools
 
-Install the TypeSpec client generator CLI globally:
+Install the TypeSpec client generator CLI using the repo-local tooling bootstrap:
+
+```bash
+cd eng/common/tsp-client && npm ci
+```
+
+Alternatively, you can install it globally:
 
 ```bash
 npm install -g @azure-tools/typespec-client-generator-cli
@@ -100,9 +106,9 @@ Replace your AutoRest generation script with TypeSpec generation and customizati
 ```json
 {
   "scripts": {
-    "generate:client": "tsp-client update -d && npm run format && dev-tool customization apply --skip index.ts",
-    "build": "npm run clean && dev-tool run build-package && dev-tool run extract-api",
-    "test": "npm run test:node && npm run test:browser",
+    "generate:client": "tsp-client update -d && pnpm run format && dev-tool customization apply --skip index.ts",
+    "build": "pnpm run clean && dev-tool run build-package && dev-tool run extract-api",
+    "test": "pnpm run test:node && pnpm run test:browser",
     "test:node": "dev-tool run build-test --no-browser-test && dev-tool run test:vitest"
   }
 }
@@ -148,7 +154,7 @@ npm run generate:client
 Use the dev-tool customization command to copy generated files to `src/` and merge with existing customizations:
 
 ```bash
-npx dev-tool customization apply --skip index.ts
+pnpm exec dev-tool customization apply --skip index.ts
 ```
 
 This command:
@@ -237,7 +243,7 @@ Delete the following files that are no longer needed:
 1. **Generate and apply customizations:**
 
    ```bash
-   npm run generate:client
+   pnpm run generate:client
    ```
 
 2. **Build the package:**
@@ -268,7 +274,7 @@ Delete the following files that are no longer needed:
 After migration, your development workflow becomes:
 
 1. **Update TypeSpec definitions** in azure-rest-api-specs
-2. **Generate new code:** `npm run generate:client`
+2. **Generate new code:** `pnpm run generate:client`
 3. **Build and test:** `pnpm turbo build && pnpm test`
 
 ### Version Management

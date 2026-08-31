@@ -139,6 +139,7 @@ Agent definitions and their detailed review guidelines are stored in:
 │   ├── archie.agent.md
 │   ├── dash.agent.md
 │   ├── dexter.agent.md
+│   ├── mgmt-breaking-change-analysis.agent.md
 │   ├── mgmt-review.agent.md
 │   ├── scribe.agent.md
 │   ├── sentinel.agent.md

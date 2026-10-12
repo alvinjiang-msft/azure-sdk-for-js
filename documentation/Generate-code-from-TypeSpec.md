@@ -58,11 +58,9 @@ Create a local json file named generatedInput.json with content similar to that 
   {
     "dryRun": false,
     "specFolder": <your-local-spec-repo-path>,
-    "headSha": <commit-id-you-want-to-generate-from>,
+    "gitCommitId": <commit-id-you-want-to-generate-from>,
     "repoHttpsUrl": "https://github.com/Azure/azure-rest-api-specs",
-    "relatedTypeSpecProjectFolder": [
-    "specification/SERVICE_DIRECTORY_NAME/PACKAGE_DIRECTORY_NAME/"
-    ]
+    "typespecProject": "specification/SERVICE_DIRECTORY_NAME/PACKAGE_DIRECTORY_NAME/"
   }
 ```
 
